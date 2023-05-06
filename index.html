@@ -14,7 +14,7 @@
                 this.input.on('pointerdown', (event) => {
                     this.tweens.add({
                         targets: this.meep,
-                        scale: 2,
+                        scale: 4,
                         duration: 100
                     });
                 });
@@ -40,7 +40,7 @@
                     });
 
                     // spawn a dropping
-                    let dropping = this.add.circle(x+10,y+10,2).setFillStyle(0,1);
+                    let dropping = this.add.circle(x+10,y+10,50).setFillStyle(0,1);
                     dropping.setDepth(-1); // below the mouse
 
                     // shoot away quickly
@@ -56,7 +56,7 @@
                     this.tweens.add({
                         targets: dropping,
                         alpha: {from: 0.5, to: 0},
-                        duration: 5000,
+                        duration: 1000,
                         ease: 'Cubic.in',
                         onComplete: () => dropping.destroy()
                     });
@@ -68,7 +68,7 @@
             width: 640,
             height: 520,
             scene: Demo,
-            backgroundColor: 0xdddddd,
+            backgroundColor: 0xfe98eb,
             parent: 'here'
         });
     </script>
